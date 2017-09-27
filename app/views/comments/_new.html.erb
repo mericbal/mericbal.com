@@ -1,0 +1,35 @@
+<h2 class="text-center slideanim">Contact Me</h2>
+
+<div class="row">
+  <div class="col-sm-6 slideanim">
+    
+    <div class="row">
+      <%= form_for @comment do |f| %>
+      <div class="col-sm-6 form-group">
+        <%= f.text_field :name, placeholder: 'Name', class: 'form-control' %>
+      </div>
+      <div class="col-sm-6 form-group">
+        <%= f.text_field :email, placeholder: 'Email', class: 'form-control' %>
+      </div>
+    </div>
+
+      <%= f.text_area :body, placeholder: 'Comment(s)', class: 'form-control', rows: 4 %>
+      <br>
+    
+    <div class="row">
+      <div class="col-sm-12 form-group"> <span> * All fields are required !</span> 
+      <%= f.submit 'Send', class: 'btn btn-default pull-right' %>
+      </div>
+    </div>
+    
+    <% end %> 
+  
+  </div>
+
+
+  <div class="col-sm-5 slideanim text-right">
+    <p> San Francisco, CA  <span class="glyphicon glyphicon-map-marker slideanim"></span></p>
+    <p> +1 707 346 11 88  <span class="glyphicon glyphicon-phone slideanim"></span></p>
+    <p> ozkan.meric.bal@gmail.com  <span class="glyphicon glyphicon-envelope slideanim"></span></p>
+  </div>
+</div>
