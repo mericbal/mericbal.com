@@ -1,0 +1,63 @@
+<%= render 'style' %>
+<%= render 'script' %>
+
+
+<div id="mb" class="jumbotron text-center">
+    <h1>Meriç BAL</h1> 
+    <p>Web Developer / Software Engineer </p>
+</div>
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span>                                                                 
+      </button>
+      	<ul class="nav navbar-nav navbar-left">
+      		<li><%= link_to 'MB', '#mb', class: 'navbar-brand' %> </li>
+      		<li><%= link_to 'reload', '/', class: 'navbar-brand' %> </li>
+
+
+      	</ul>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li> <%= link_to 'About Me', '#about' %> </li>
+        <li> <%= link_to 'My Knowledge', '#myknowledge' %> </li>
+        <li> <%= link_to 'Social', '#social' %> </li>
+        <li> <%= link_to 'Contact', '#contact' %> </li>
+        <li> <%= link_to 'Portfolio & Resume', '/portfolio' %> </li>
+      </ul>
+    </div>
+  
+  </div>
+</nav>
+
+
+
+
+<div id="about" class="container-fluid">
+  <%= render 'aboutme' %>
+</div>
+
+<div id="myknowledge" class="container-fluid bg-grey">
+  <%= render 'myknowledge' %>
+</div>
+
+<div id="social" class="container-fluid text-center">
+	<%= render 'social' %>
+</div>
+
+<div id="contact" class="container-fluid bg-grey">
+	<% if flash[:notice] %>
+  	<div class="notice text-center alert alert-success" id="green"> <%= flash[:notice] %> </div>
+	<% end %>
+  <%= render 'comments/new' %>
+</div>
+
+
