@@ -6,7 +6,7 @@
     <div class="row">
       <%= form_for @comment do |f| %>
       <div class="col-sm-6 form-group">
-        <%= f.text_field :name, placeholder: 'Name', class: 'form-control' %>
+        <%= f.text_field :name, autofocus: true, placeholder: 'Name', class: 'form-control' %>
       </div>
       <div class="col-sm-6 form-group">
         <%= f.text_field :email, placeholder: 'Email', class: 'form-control' %>
